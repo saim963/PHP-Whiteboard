@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            margin: 10px 0;
+            padding: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <?php 
@@ -16,6 +35,14 @@
 
     <h1>Front Page</h1>
     <p>Hello this is Front page!!</p>
+    <div class="container">
+        <h2>Create Your PDF</h2>
+        <form action="generate_pdf.php" method="post">
+            <input type="text" name="title" placeholder="Enter PDF Title" required>
+            <textarea name="content" rows="5" placeholder="Enter PDF Content" required></textarea>
+            <button type="submit">Download PDF</button>
+        </form>
+    </div>
 </body>
 </html>
 <?php

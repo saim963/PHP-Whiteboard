@@ -1,7 +1,7 @@
 services:
   www:
     image: webdevops/php-apache-dev:8.2
-    container_name: webdevops_php_apache
+    container_name: webdevops_php_apache_learning
     volumes:
       - "./:/app"            # Maps your project directory to /app inside the container
     ports:
@@ -14,7 +14,7 @@ services:
 
   db:
     image: mysql:latest
-    container_name: mysql_db
+    container_name: mysql_db_learning
     environment:
       - MYSQL_DATABASE=php_docker
       - MYSQL_USER=php_docker
